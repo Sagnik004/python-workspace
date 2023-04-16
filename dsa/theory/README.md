@@ -2,13 +2,14 @@
 
 ## Important Links
 [GeeksForGeeks](https://www.geeksforgeeks.org/python-data-structures-and-algorithms/)
+[w3schools](https://www.w3schools.com/python/)
 
 ## Topics Covered
 
 - [Lists](#lists)
 - [Tuple](#tuple)
 - [Set](#set)
-- Frozen Sets
+- [Frozen Sets](#frozen-sets)
 - String
 - Dictionary
 - Matrix
@@ -204,3 +205,15 @@ y = {'google', 'microsoft', 'apple'}
 z = x.symmetric_difference(y)
 print(x) # {'google', 'banana', 'microsoft', 'cherry'}
 ```
+
+### Frozen Sets
+
+- These are immutable objects that only support methods and operators that produce a result without affecting the frozen set or sets to which they are applied.
+- While elements of a set can be modified at any time, elements of the frozen set remain the same after creation.
+
+```python
+frozen_set = frozenset(['e', 'f', 'g'])
+print(frozen_set)
+frozen_set.add('h') # This line would throw an error
+```
+

@@ -1,8 +1,7 @@
 # <ins>Python Data Structures & Algorithms</ins>
 
 ## Important Links
-[GeeksForGeeks](https://www.geeksforgeeks.org/python-data-structures-and-algorithms/)
-[w3schools](https://www.w3schools.com/python/)
+[GeeksForGeeks](https://www.geeksforgeeks.org/python-data-structures-and-algorithms/), [w3schools](https://www.w3schools.com/python/)
 
 ## Topics Covered
 
@@ -10,7 +9,7 @@
 - [Tuple](#tuple)
 - [Set](#set)
 - [Frozen Sets](#frozen-sets)
-- String
+- [String](#string)
 - Dictionary
 - Matrix
 - Bytearray
@@ -217,3 +216,174 @@ print(frozen_set)
 frozen_set.add('h') # This line would throw an error
 ```
 
+### String
+
+- String in Python is an immutable array of bytes representing Unicode characters
+- Python does not have a character data type, a single character is simply a string with a length of 1
+- As strings are immutable, modifying a string will result in creating a new copy
+- [List of string methods](https://www.w3schools.com/python/python_strings_methods.asp)
+
+String index also starts from 0:
+
+![GFG - String indexes](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200204160843/strings.jpg)
+
+Some basic examples:
+
+```python
+str1 = 'Welcome to Blueland'
+print(str1)
+
+# Accessing elements by index
+print(str1[0]) # First element i.e., 'W'
+print(str1[-1]) # Last element i.e., 'd'
+```
+
+Multiline string (line breaks are inserted at the same position as in the code):
+
+```python
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)
+```
+
+Looping through a string:
+
+```python
+for x in 'Python':
+  print(x)
+```
+
+String length:
+
+```python
+str1 = 'Hello World!'
+print(len(str1)) # 12
+```
+
+To check if a certain phrase or character is present in a string, we can use the keyword ```in```:
+
+```python
+txt = 'The best things in life are free!'
+print('free' in txt) # True
+
+txt = 'The best things in life are free!'
+if 'free' in txt:
+  print('Yeah! It\'s free!')
+```
+
+To check if a certain phrase or character is NOT present in a string, we can use the keyword ```not in```:
+
+```python
+txt = 'The best things in life are free!'
+print('expensive' not in txt) # True
+
+txt = 'The best things in life are free!'
+if 'expensive' not in txt:
+  print('Expensive is not present!')
+```
+
+Slicing strings:
+
+```python
+txt = 'Hello World!'
+print(txt[2:5]) # From position 2 to 4 i.e., 'llo'
+
+# Slicing from the start
+txt = 'Hello World!'
+print(txt[:5]) # From position 0 to 4 i.e., 'Hello'
+
+# Slicing till the end
+txt = 'Hello World!'
+print(txt[6:]) # From position 0 to 4 i.e., 'World!'
+
+# Negative indexing
+txt = 'Hello World!'
+print(txt[-6:-2]) # 'Worl'
+```
+
+Modify strings:
+
+```python
+# The upper() method returns the string in upper case
+txt = 'Hello World!'
+print(txt.upper()) # 'HELLO WORLD!'
+
+# The lower() method returns the string in lower case
+txt = 'Hello World!'
+print(txt.lower()) # 'hello world!'
+
+# Remove whitespace [The strip() method removes any whitespace from the beginning or the end]
+txt = ' Hello World! '
+print(txt.strip()) # 'Hello World!'
+
+# The replace() method replaces a string with another string (all occurrances)
+txt = 'Hello World!'
+print(txt.replace('H', 'M')) # 'Mello World!'
+
+# The split() method returns a list where the text between the specified separator becomes the list items
+txt = 'Hello, World!'
+print(txt.split(',')) # ['Hello', ' World!']
+```
+
+String concatenation:
+
+```python
+# Use the plus + operator
+a = 'Hello'
+b = 'World'
+c = a + b
+print(c)
+
+a = 'Hello'
+b = 'World'
+c = a + ' ' + b
+print(c)
+```
+
+Format strings:
+
+```python
+# We cannot combine strings and numbers like this
+age = 36
+txt = 'My name is John, I am ' + age # This will lead to error
+print(txt)
+
+# But we can combine strings and numbers by using the format() method
+age = 36
+txt = 'My name is John, and I am {}'
+print(txt.format(age))
+
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = 'I want {} pieces of item {} for {} dollars.'
+print(myorder.format(quantity, itemno, price))
+
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = 'I want to pay {2} dollars for {0} pieces of item {1}.'
+print(myorder.format(quantity, itemno, price))
+```
+
+Escape Characters:
+
+```python
+txt = 'We are the so-called \'Vikings\' from the north.'
+```
+
+List of escape characters:
+
+| Code | Description     |
+| ---- | --------------- |
+| \\'  | Single Quote    |
+| \\\  | Backslash       |
+| \n   | New line        |
+| \r   | Carriage Return |
+| \t   | Tab             |
+| \b   | Backspace       |
+| \f   | Form Feed       |
+| \ooo | Octal value     |
+| \xhh | Hex value       |

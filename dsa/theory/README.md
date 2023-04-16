@@ -6,7 +6,7 @@
 ## Topics Covered
 
 - [Lists](#lists)
-- Tuple
+- [Tuple](#tuple)
 - Set
 - Frozen Sets
 - String
@@ -74,4 +74,21 @@ print(list2[-1]) # Last element i.e., basket
 print(list1[-3]) # Third last element i.e., 3
 ```
 
+### Tuple
+
+- Tuples are similar to Lists, but Tuples are immutable in nature i.e., once created it cannot be modified
+- Just like a List, a Tuple can also contain elements of various types
+- Tuples are created by placing a sequence of values separated by ‘comma’ with or without the use of parentheses for grouping of the data sequence
+
+> Note: To create a tuple of one element there must be a trailing comma. For example: ```(8,)``` will create a tuple containing 8 as the element.
+
+```python
+mytuple = ('red', 'green', 'blue')
+print(mytuple)
+
+# Accessing element using indexing
+print(mytuple[0]) # First element i.e., 'red'
+print(mytuple[-1]) # Last element i.e., 'blue'
+print(mytuple[-2]) # 2nd last element i.e., 'green'
+```
 

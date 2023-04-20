@@ -10,7 +10,7 @@
 - [Set](#set)
 - [Frozen Sets](#frozen-sets)
 - [String](#string)
-- Dictionary
+- [Dictionary](#dictionary)
 - Matrix
 - Bytearray
 - LinkedList
@@ -387,3 +387,6 @@ List of escape characters:
 | \f   | Form Feed       |
 | \ooo | Octal value     |
 | \xhh | Hex value       |
+
+### Dictionary
+
